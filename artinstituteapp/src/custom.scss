@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Monoton&family=Recursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+$font-color-primary: #EAEAEA;
+$font-color-secondary: red;
+$font-family-primary: 'Roboto Slab', serif;
+$font-family-secondary: 'Roboto', sans-serif;
+/*$font-secondary: #333332;*/
+$background-primary: #0C151D;
+$background-secondary: purple;
+
+.App {
+    margin-top: 0;
+    padding: 0;
+    background-color: $background-primary;
+    color: $font-color-primary;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+.navbar{
+  color: $font-color-secondary !important;
+}
+.container {
+  display: flex;
+}
+.grid{
+  flex-wrap: wrap;
+  font-family: $font-family-secondary;
+}
+.tarjeta {
+    background-color: $background-secondary;
+    color: $font-color-primary;
+    width: 18rem !important;
+    min-width: 18rem;
+    /*max-height: 19rem*/
+  }
+
+
+@import "~bootstrap/scss/bootstrap";

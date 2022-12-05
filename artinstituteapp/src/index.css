@@ -1,0 +1,15 @@
+html, body, #root {
+  margin-top: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #0C151D;
+}
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}

@@ -1,45 +1,60 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 import Header from './components/Header/Header';
+import Detalles from './components/Detalles/Detalles';
+import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Grid from './components/Grid/Grid';
+import { useDispatch } from 'react-redux'
+import { initObras } from './reducers/reducers';
 
 import './App.scss';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 
-function App() {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [obras, setObras] = useState([]);
-
+const App = () => {
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetch('https://api.artic.edu/api/v1/artworks?fields=id,title,thumbnail,artist_title,publication_history,dimensions,date_display,main_reference_number,image_id'
-)
-      .then(res => res.json())
-      .then(
-        (res) => {
-          setIsLoaded(true);
-          setObras(res.data);
-        },
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      )
-  }, [])
+    dispatch(initObras())
+  }, [dispatch])
 
   return (
-    
-    <Container>
-      <div className="App">
-        <Header />
-        <Grid obras={obras} /> 
-        <Footer />
-      </div>
-    </Container>
-  );
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/' element={
+          <Container fluid>
+            <div className="App">
+              <Home />
+            </div>
+          </Container>
+        }
+        />
+        <Route path='/grid' element={
+          <Container fluid>
+            <div className="App">
+              <Grid />
+            </div>
+          </Container>
+        }
+        />
+        <Route path='/grid/detalles/:id' element={
+          <Container fluid>
+            <div className="App">
+              <Detalles />
+              
+            </div>
+          </Container>
+        }
+        />
+        
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  )
 }
 
 export default App;

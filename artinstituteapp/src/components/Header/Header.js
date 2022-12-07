@@ -1,26 +1,15 @@
 import React from 'react';
 import { Navbar, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
-/*<header className="header">
-            <div className="texto">
-                {user && (
-                    <p>
-                        Esta logueado
-                    </p>
-                )}
-                {!user && (
-                    <p>
-                        No esta logueado
-                    </p>
-                )}
-            </div>
-        </header>*/
 const Header = props => {
   const { user } = props;
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home" className="navbar">Art Institute App</Navbar.Brand>
+        <Navbar.Brand className="navbar">Art Institute App</Navbar.Brand>
+        <Link className='navlink' to="/" >Home</Link>
+        <Link className='navlink' to="/grid" >Grid</Link>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
@@ -33,7 +22,7 @@ const Header = props => {
 };
 
 Header.defaultProps = {
-  user: 'Juan carlos'
+  user: 'Juan Carlos'
 };
 
 export default Header;

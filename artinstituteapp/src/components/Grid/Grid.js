@@ -1,13 +1,17 @@
 import Tarjeta from '../Tarjeta/Tarjeta';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 
-const Grid = props => {
-    const { obras } = props;
+const Grid = () => {
+    const obras = useSelector(state => state.obras);
     return (
-        <Container className="grid">
-            {obras.map((obra) => {
-                    return <Tarjeta key={obra.id} {...obra} />;
-                })}
+        <Container fluid className="grid">
+            <Row className="justify-content-md-center">
+            {obras[0].map(obra => {
+                return <Col><Tarjeta key={obra.id} {...obra} /></Col>;
+            }
+            )}
+            </Row>
         </Container>
     );
 }

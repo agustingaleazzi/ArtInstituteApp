@@ -1,19 +1,14 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
-const Footer = props => {
-    const { direcciones } = props;
+const Footer = () => {
     return (
-        <div className="footer">
-            <p>
-                Un footer viejo noma
-            </p>
-            {direcciones}
-        </div>
+        <Container fluid className="footer">
+            <h6>
+                Aplicación desarrollada por Agustin Galeazzi
+            </h6>
+        </Container>
     );
-};
-
-Footer.defaultProps = {
-    direcciones: 'link a alguna pagina'
 };
 
 export default Footer;

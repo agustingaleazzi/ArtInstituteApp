@@ -2,14 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-$font-color-primary: #EAEAEA;
-$font-color-secondary: red;
+//theming
+$font-color-primary: #777777;
+$font-color-secondary: #3c3c3c;
 $font-family-primary: 'Roboto Slab', serif;
 $font-family-secondary: 'Roboto', sans-serif;
-/*$font-secondary: #333332;*/
-$background-primary: #0C151D;
-$background-secondary: purple;
+$controls: #0074CA;
+$background-primary: #27509b;
+$background-secondary: #cbcbcb;
 
+//App
 .App {
     margin-top: 0;
     padding: 0;
@@ -18,23 +20,85 @@ $background-secondary: purple;
     font-family: 'Roboto Slab', serif;
     text-align: center;
 }
+//NAVBAR
 .navbar{
   color: $font-color-secondary !important;
 }
+
+//TITULO PAGINA
+.pageTitle{
+  padding: 3rem;
+}
+
+//CONTAINERS
 .container {
   display: flex;
 }
+
+//HOME
+.home{
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  color: $font-color-primary !important; 
+  font-family: $font-family-primary;
+  font-weight: 600;
+  background-color: $background-secondary;
+  margin-bottom: 2rem;
+}
+
+//GRID DE TARJETAS
 .grid{
-  flex-wrap: wrap;
+  align-content: stretch;
+  flex-flow: column nowrap;
+  flex-wrap: nowrap;
+  color:$font-color-secondary;
   font-family: $font-family-secondary;
 }
+
+//LINKS DE LA BARRA
+.navlink{
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+//LINK DEL HOME
+.homelink{
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+//TARJETAS
 .tarjeta {
+    align-self: auto;
     background-color: $background-secondary;
     color: $font-color-primary;
     width: 18rem !important;
     min-width: 18rem;
-    /*max-height: 19rem*/
   }
 
+//BOTONES
+.button{
+  background-color: $controls !important; 
+}
+
+//DETALLES
+.detalles{
+  h1{
+    font-weight: 600;
+  }
+  color: $font-color-secondary;
+  background-color: $background-secondary;
+  margin-bottom: 2rem;
+}
+
+//FOOTER
+.footer{
+  background-color: $background-secondary;
+  width: 68rem;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
 
 @import "~bootstrap/scss/bootstrap";

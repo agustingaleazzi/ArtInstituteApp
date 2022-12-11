@@ -1,59 +1,73 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import { useDispatch } from 'react-redux'
+import { initObras } from './reducers/reducers';
 
 import Header from './components/Header/Header';
 import Detalles from './components/Detalles/Detalles';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
-import Grid from './components/Grid/Grid';
-import { useDispatch } from 'react-redux'
-import { initObras } from './reducers/reducers';
+import Tarjetas from './components/Tarjetas/Tarjetas';
+import PaginaDefault from './components/PaginaDefault'
 
 import './App.scss';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
+import { Box } from '@mui/material';
+import useStyles from './styles/styles';
+import Favoritas from './components/Favoritas/Favoritas';
 
 const App = () => {
+  const styles = useStyles();
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(initObras())
   }, [dispatch])
 
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path='/' element={
-          <Container fluid>
-            <div className="App">
+    <div className='App'>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={
+            <Box className={styles.MuiBox}>
               <Home />
-            </div>
-          </Container>
-        }
-        />
-        <Route path='/grid' element={
-          <Container fluid>
-            <div className="App">
-              <Grid />
-            </div>
-          </Container>
-        }
-        />
-        <Route path='/grid/detalles/:id' element={
-          <Container fluid>
-            <div className="App">
-              <Detalles />
-              
-            </div>
-          </Container>
-        }
-        />
-        
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+            </Box>
+          }
+          />
+          <Route path='detalles/:id' element={
+            <Box className={styles.MuiBox} >
+              <div className="App">
+                <Detalles />
+              </div>
+            </Box>
+          }
+          />
+          <Route path='/grid' element={
+            <Box className={styles.MuiBox} >
+              <Tarjetas />
+            </Box>
+          }
+          />
+          
+          <Route path='/favoritas' 
+          element={
+            <Box className={styles.MuiBox} >
+              <Favoritas />
+            </Box>
+          }
+          />
+          <Route path='*' element={
+            <Box className={styles.MuiBox}>
+              <PaginaDefault />
+            </Box>
+          }
+          />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   )
 }
 

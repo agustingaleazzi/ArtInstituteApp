@@ -1,5 +1,5 @@
-export const AGREGAR_MG = 'AGREGAR_MG';
-export const QUITAR_MG = 'QUITAR_MG';
+export const AGREGAR_FAVORITO = 'AGREGAR_FAVORITO';
+export const QUITAR_FAVORITO = 'QUITAR_FAVORITO';
 export const AGREGAR_OBRA = 'AGREGAR_OBRA';
 export const INIT_OBRAS = 'INIT_OBRAS';
 export const INIT_PAGINA = 'INIT_PAGINA';

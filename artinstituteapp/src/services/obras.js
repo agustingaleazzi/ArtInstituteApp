@@ -9,7 +9,7 @@ const fields = '?fields=id,title,thumbnail,artist_title,publication_history,dime
 export const getAllObras = async () => {
     const res = await axios.get(baseUrl + page + '1' + fields)
     const { data } = res.data;
+    console.log(data)
     return data;
-
 }
 

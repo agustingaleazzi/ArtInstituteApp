@@ -1,15 +1,18 @@
-html, body, #root {
+html,
+body,
+#root {
   margin-top: 0;
   padding: 0;
   height: 100%;
   background-color: #27509b;
 }
 
-*{
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-a{
+
+a {
   text-decoration: none;
 }

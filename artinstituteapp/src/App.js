@@ -14,6 +14,7 @@ import './App.scss';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Box } from '@mui/material';
+
 import useStyles from './styles/styles';
 import Favoritas from './components/Favoritas/Favoritas';
 

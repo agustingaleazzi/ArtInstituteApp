@@ -1,6 +1,6 @@
 import Tarjeta from '../Tarjeta/Tarjeta';
 import { useSelector } from 'react-redux';
-import { Grid, Box } from '@mui/material';
+import { Grid } from '@mui/material';
 
 import useStyles from '../../styles/styles';
 import React, { Suspense } from 'react';
@@ -11,7 +11,7 @@ const Tarjetas = () => {
 
     return (
         <Suspense fallback="loading...">
-            <Grid
+            <Grid 
                 className={styles.MuiGrid}
             >
             {obras.map(obra => {

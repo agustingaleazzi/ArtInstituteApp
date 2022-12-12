@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
-import { initObras } from './reducers/reducers';
+import { initObras } from './actions/actions';
 
 import Header from './components/Header/Header';
 import Detalles from './components/Detalles/Detalles';
@@ -38,9 +38,7 @@ const App = () => {
           />
           <Route path='detalles/:id' element={
             <Box className={styles.MuiBox} >
-              <div className="App">
                 <Detalles />
-              </div>
             </Box>
           }
           />

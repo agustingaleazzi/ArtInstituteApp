@@ -3,15 +3,13 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 
-import { agregarFavoritos, quitarFavoritos } from '../../reducers/reducers';
+import { agregarFavoritos, quitarFavoritos } from '../../actions/actions';
 
 import { Image, Col, Row } from 'react-bootstrap';
 import { Box } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { IconButton } from '@mui/material';
-
-
 
 const Detalles = () => {
     const obras = useSelector(state => state.obras);
@@ -22,13 +20,12 @@ const Detalles = () => {
     const agregarAFavoritos = () => {
         dispatch(agregarFavoritos(obra))
     }
-
     const quitarDeFavoritos = () => {
         dispatch(quitarFavoritos(obra))
     }
 
     return (
-        <Box className="detalles " style={{ width: '68rem' }}>
+        <Box className="detalles ">
             {obra.id && (
                 <Box>
                     <Image variant="top" style={{ height: '40rem' }} src={'https://www.artic.edu/iiif/2/' + obra.image_id + '/full/843,/0/default.jpg'}>
@@ -58,7 +55,6 @@ const Detalles = () => {
                             </h1>
                             
                         </Row>
-
                     </Col>
                     <Col>
                         <Row>
@@ -91,7 +87,6 @@ const Detalles = () => {
                                 Estilo: {obra.style_title ? obra.style_title : 'No clasificada'}
                             </p>
                         </Row>
-
                     </Col>
                 </Box>
             )}

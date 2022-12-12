@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { useSelector } from 'react-redux';
 
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -11,9 +10,7 @@ import Typography from '@mui/material/Typography';
 
 const Tarjeta = (props) => {
   const obra = props;
-  
   return (
-
     <Card sx={{
       width: 320,
       textDecoration: 'none'
@@ -29,7 +26,7 @@ const Tarjeta = (props) => {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Fecha de creacion: {obra.artwork_type_title}
+          Fecha de creacion: {obra.date_display}
         </Typography>
         <Link className='link' to={`../detalles/${obra.id}`} >Detalles de la obra
 

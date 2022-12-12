@@ -1,13 +1,5 @@
 import { createTheme } from "@mui/material";
-import { purple } from "@mui/material/colors";
 
-/*$font-color-primary: #777777;
-$font-color-secondary: #3c3c3c;
-$font-family-primary: 'Roboto Slab', serif;
-$font-family-secondary: 'Roboto', sans-serif;
-$controls: #0074CA;
-$background-primary: #27509b;
-$background-secondary: #cbcbcb;*/
 
 const theme = createTheme({
     palette: {
@@ -20,11 +12,6 @@ const theme = createTheme({
         text: {
             primary: '#777777',
             secondary: '#3c3c3c'
-        }
-    },
-    typography: {
-        myVariant: {
-            fontSize: "4rem"
         }
     },
     components: {
@@ -51,6 +38,18 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     width: 200,
+                    height: 420
+                },
+            },
+        },
+        MuiCardHeader: {
+            styleOverrides: {
+                root: {
+                    width: 250,
+                    height: 150,
+                    alignContent: 'center',
+                    textAlign: 'center',
+                    margin: 'auto'
                 },
             },
         },

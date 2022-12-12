@@ -51,7 +51,7 @@ Listado de dependencias extraido de package.json
 ////////////////////////////////////////
 
 Es requisito tener instalado y actualizado node.js.
-Una vez clonado el repositorio, debe dirigirse a la terminal, colocarse dentro del directorio (cd artinstituteapp) y ejecutar el comando 'npm i' para instalar las dependencias necesarias para correr el programa. Una vez completada la operación, ejecutar el comando 'npm start' para correr la aplicacion, que por defecto se conectara al puerto 3000 del local.
+Una vez clonado el repositorio, debe dirigirse a la terminal, colocarse dentro del directorio (cd artinstituteapp). Ejecutar el comando 'npm config set legacy-peer-deps true' y ejecutar el comando 'npm i' para instalar las dependencias necesarias para correr el programa. Una vez completada la operación, ejecutar el comando 'npm start' para correr la aplicacion, que por defecto se conectara al puerto 3000 del local.
 
 
 ////////////////////////////////////////

@@ -13,6 +13,10 @@ body,
   box-sizing: border-box;
 }
 
-a {
+.detalles{
+  align-content: center;
+}
+
+.link {
   text-decoration: none;
 }

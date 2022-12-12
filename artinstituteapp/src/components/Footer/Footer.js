@@ -1,10 +1,15 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import { Container } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <Box className="footer">
+        <Box sx={{
+            marginTop: '1rem',
+            flexDirection: 'row', 
+            justifyContent: "right",
+            alignItems: "right", 
+            display: "flex",
+        }}>
             <h6>
                 Aplicación desarrollada por Agustin Galeazzi
             </h6>

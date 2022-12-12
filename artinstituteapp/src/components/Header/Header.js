@@ -3,7 +3,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -35,8 +34,13 @@ const Header = props => {
             </IconButton></Typography>
             
           </Link>
-
-          <Button color="inherit">Signed in as: {user}</Button>
+          {user && (
+            
+          <Link style={{ textDecoration: 'none', paddingRight: '1rem' }} to='/login'>Signed in as: {user}</Link>
+          ) }
+          {!user && (
+            <Link style={{ textDecoration: 'none', paddingRight: '1rem' }} to='/login'>Login</Link>
+          ) }
         </Toolbar>
       </AppBar>
     </Box>
@@ -44,7 +48,7 @@ const Header = props => {
 };
 
 Header.defaultProps = {
-  user: 'Juan Carlos'
+  user: null
 };
 
 export default Header;

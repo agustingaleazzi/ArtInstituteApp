@@ -10,18 +10,16 @@ en particular debe ir a la pantalla Detalle de obra de arte.
 - Detalle de obra de arte: Muestra información de una obra de arte. Queda a criterio del desarrollador la elección de los datos a mostrar.
 
 
-////////////////////////////////////////   
-///////////Acerca de la App/////////////
-////////////////////////////////////////
+# Acerca de la App
 
-Lenguaje: Javascript
-Framework: React
-Versionado: Git 
-Componentes: Material UI
-Manejo de estados: Redux
-Alojamiento del código: github
-Gestion de dependencias: npm
-Manejo de rutas: react router
+- Lenguaje: Javascript
+- Framework: React
+- Versionado: Git 
+- Componentes: Material UI
+- Manejo de estados: Redux
+- Alojamiento del código: github
+- Gestion de dependencias: npm
+- Manejo de rutas: react router
 
 
 Listado de dependencias extraido de package.json
@@ -46,44 +44,39 @@ Listado de dependencias extraido de package.json
     "web-vitals": "^2.1.4"
 
 
-////////////////////////////////////////
-///////CORRER LA APLICACION/////////////
-////////////////////////////////////////
+
+# CORRER LA APLICACION
+
 
 Es requisito tener instalado y actualizado node.js.
-Una vez clonado el repositorio, debe dirigirse a la terminal, colocarse dentro del directorio (cd artinstituteapp). Ejecutar el comando 'npm config set legacy-peer-deps true' y ejecutar el comando 'npm i' para instalar las dependencias necesarias para correr el programa. Una vez completada la operación, ejecutar el comando 'npm start' para correr la aplicacion, que por defecto se conectara al puerto 3000 del local.
+Una vez clonado el repositorio, debe dirigirse a la terminal, colocarse dentro del directorio (cd artinstituteapp). Ejecutar el comando 'npm i' para instalar las dependencias necesarias para correr el programa. Una vez completada la operación, ejecutar el comando 'npm start' para correr la aplicacion, que por defecto se conectara al puerto 3000 del local.
+Ejecutar el comando 'npm config set legacy-peer-deps true' en caso de que las dependencias se pisen.
 
 
-////////////////////////////////////////
-////FUNCIONAMIENTO DE LA APLICACION/////
-////////////////////////////////////////
+# FUNCIONAMIENTO DE LA APLICACION
 
 Funcionamiento de componentes:
-Home: La aplicación cuenta en esta pantalla con una pantalla de bienvenida y un link a la lista de obras.
-Header: En el header se encuentran los links para moverse por la página, asi como un borrador del usuario, implementable en una próxima versión, por ahora no funciona y el nombre de usuario esta pasado como default.
-Tarjetas: Esta lista es un grid de Tarjetas
-Tarjeta: que muestra la imagen, titulo, autor y fecha de creación. Esta tarjeta tambien tiene un link a la visualización de los detalles.
-Detalles: En la pantalla de detalles se muestra más información: el país de origen, los materiales y el estilo. En esta misma pantalla, junto al título, puede marcarse como favorita la obra.
-Favoritas: Permite visualizar las obras que han sido seleccionadas como favoritas por el usuario.
-PaginaDefault: En caso de que el usuario quiera ingresar a una dirección desconocida para react router, le avisa y lo redirige al home.
-Error: Todavia sin funcionamiento, la idea es usarla de ErrorBoundary en una versión próxima.
-Footer: Un footer genérico donde se podría agregar más información de ser necesario.
+- Home: La aplicación cuenta en esta pantalla con una pantalla de bienvenida y un link a la lista de obras.
+- Header: En el header se encuentran los links para moverse por la página, asi como un borrador del usuario, implementable en una próxima versión, por ahora no funciona y el nombre de usuario esta pasado como default.
+- Tarjetas: Esta lista es un grid de Tarjetas
+- Tarjeta: que muestra la imagen, titulo, autor y fecha de creación. Esta tarjeta tambien tiene un link a la visualización de los detalles.
+- Detalles: En la pantalla de detalles se muestra más información: el país de origen, los materiales y el estilo. En esta misma pantalla, junto al título, puede marcarse como favorita la obra.
+- Favoritas: Permite visualizar las obras que han sido seleccionadas como favoritas por el usuario.
+- PaginaDefault: En caso de que el usuario quiera ingresar a una dirección desconocida para react router, le avisa y lo redirige al home.
+- Error: Todavia sin funcionamiento, la idea es usarla de ErrorBoundary en una versión próxima.
+- Footer: Un footer genérico donde se podría agregar más información de ser necesario.
 
 
-////////////////////////////////////////
-/////////ACERCA DE LOS ESTILOS//////////
-////////////////////////////////////////
+# ACERCA DE LOS ESTILOS/
 
 Se utilizó react bootstrap y material ui para el diseño de la página. El tema fue creado utilizando createTheme de material.ui, con
 los colores documentados en confluence.
 
 
-////////////////////////////////////////
-/////COMENTARIOS DEL DESARROLLADOR//////
-////////////////////////////////////////
+# COMENTARIOS DEL DESARROLLADOR
 
 Proximas versiones: en las próximas versiones de la app, se podria:
-- completar el manejo de errores, hacerlo mas eficiente, que utilice el estado de la app
-- agregar un paginado o un boton de "refresh" de obras al feed.
-- implementar un login que permita al usuario guardar sus obras favoritas.
-- algún tipo de alta 
+- Completar el manejo de errores, hacerlo mas eficiente, que utilice el estado de la app
+- Agregar un paginado o un boton de "refresh" de obras al feed.
+- Implementar un login que permita al usuario guardar sus obras favoritas.
+- Algún tipo de alta 

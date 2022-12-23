@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { useAppSelector } from '../hooks/hooks';
 
-const Error = props => {
-    const {texto, codigo} = props;
+const Error = () => {
+    const {texto, codigo} = useAppSelector((state) => state.errores);
     return(
         <Container>
             <p>

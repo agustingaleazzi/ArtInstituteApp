@@ -7,9 +7,8 @@ import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-const Header = props => {
-  const { user } = props;
-  return (
+const Header: React.FC = () => (
+
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
@@ -44,22 +43,22 @@ const Header = props => {
 
               </Link>
             </Box>
-            {user && (
+           
+          </Box>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
+
+ /*{user && (
 
               <Link style={{ textDecoration: 'none', paddingRight: '1rem' }} to='/login'>Signed in as: {user}</Link>
             )}
             {!user && (
               <Link style={{ textDecoration: 'none', paddingRight: '1rem' }} to='/login'>Login</Link>
             )}
-          </Box>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
-};
-
 Header.defaultProps = {
   user: null
-};
+};*/
 
 export default Header;

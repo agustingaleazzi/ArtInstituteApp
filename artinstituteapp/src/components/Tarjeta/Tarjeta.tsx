@@ -7,9 +7,12 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import { useAppSelector } from '../../hooks/hooks';
 
-const Tarjeta = (props) => {
-  const obra = props;
+import { obra } from '../../interfaces/interfaces';
+
+const Tarjeta = ({id}:any) => {
+  const obra:obra = useAppSelector(state => state.obras.data.find((e:obra) => e.id === Number(id) ));
   return (
     <Card sx={{
       width: 320,
@@ -29,10 +32,7 @@ const Tarjeta = (props) => {
           Fecha de creacion: {obra.date_display}
         </Typography>
         <Link className='link' to={`../detalles/${obra.id}`} >Detalles de la obra
-
         </Link>
-        
-
       </CardContent>
 
     </Card>
